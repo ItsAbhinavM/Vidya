@@ -676,7 +676,7 @@
 				console.log('before going to if loops')
 
 				expandButton.addEventListener("click", function () {
-					sidebarHeader.style.display='none';
+					sidebarHeader.style.visibility='hidden';
 					console.log('button is clicked');
 					sidebar.classList.add("fullscreen");
     				expandButton.innerHTML = '<i class="material-icons">fullscreen_exit</i>';
@@ -689,6 +689,7 @@
 				})
 
 				exitButton.addEventListener("click", function () {
+					sidebarHeader.style.visibility='visible';
 					console.log("Exit button is clicked");
 					sidebar.classList.remove("fullscreen");
     				exitButton.innerHTML = '<i class="material-icons">fullscreen</i>';
