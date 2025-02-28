@@ -655,7 +655,7 @@
 					sidebar.classList.add('collapsed');
 					button.textContent = 'keyboard_arrow_up';
 					// vidyacopy = ""
-					vidya.src = '';
+					vidya.src = 'http://localhost:12393/';
 					text.textContent = 'Got any doubts? Ask Vidya';
 				} else {
 					// sidebar.style.height = '430px';
@@ -663,42 +663,43 @@
 					button.textContent = 'remove';
 					text.textContent = 'Hi... How may I help you?';
 					if (vidyacopy) {
-						vidya.src = vidyacopy;
+						vidya.src = 'http://localhost:12393/	';
 					}
 				}
 			}
 			async function expandIframe() {
-				const iframe = document.getElementById("vidya");
-				const sidebar= document.getElementById("sidebarBox");
-				const sidebarHeader = document.getElementById('sidebarHeader')
-				const expandButton = document.getElementById("fullscreenButton");
-				const exitButton = document.getElementById("exitButton");
-				console.log('before going to if loops')
+    const iframe = document.getElementById("vidya");
+    const sidebar = document.getElementById("sidebarBox");
+    const sidebarHeader = document.getElementById('sidebarHeader');
+    const expandButton = document.getElementById("fullscreenButton");
+    const exitButton = document.getElementById("exitButton");
+    
+    // Check if the sidebar is currently collapsed and iframe is empty
+    if (sidebar.classList.contains('collapsed') && 
+        (iframe.src === '' || !iframe.src.includes('localhost:12393'))) {
+        // Load the iframe source before expanding
+        iframe.src = 'http://localhost:12393/';
+    }
+    
+    // Toggle fullscreen state
+    if (!sidebar.classList.contains("fullscreen")) {
+        // Enter fullscreen
+        sidebarHeader.style.visibility = 'hidden';
+        sidebar.classList.add("fullscreen");
+        expandButton.innerHTML = '<i class="material-icons">fullscreen_exit</i>';
+        exitButton.style.display = "block";
+        exitButton.style.marginRight = '15px';
+        exitButton.style.marginTop = '15px';
+    } else {
+        // Exit fullscreen
+        sidebarHeader.style.visibility = 'visible';
+        sidebar.classList.remove("fullscreen");
+        expandButton.innerHTML = '<i class="material-icons">fullscreen</i>';
+        iframe.classList.remove("fullscreen-iframe");
+        exitButton.style.display = "none";
+    }
+}
 
-				expandButton.addEventListener("click", function () {
-					sidebarHeader.style.visibility='hidden';
-					console.log('button is clicked');
-					sidebar.classList.add("fullscreen");
-    				expandButton.innerHTML = '<i class="material-icons">fullscreen_exit</i>';
-					// iframe.classList.add("fullscreen-iframe");
-					expandButton.textContent = "fullscreen_exit";
-					exitButton.style.display = "block";
-					exitButton.style.marginRight = '15px';
-					exitButton.style.marginTop = '15px';
-					console.log('exit button style has been changed');
-				})
-
-				exitButton.addEventListener("click", function () {
-					sidebarHeader.style.visibility='visible';
-					console.log("Exit button is clicked");
-					sidebar.classList.remove("fullscreen");
-    				exitButton.innerHTML = '<i class="material-icons">fullscreen</i>';
-					iframe.classList.remove("fullscreen-iframe");
-					expandButton.innerHTML = '<i class="material-icons">fullscreen</i>';
-					// exitButton.querySelector("i").textContent="close";
-					exitButton.style.display = "none";
-				})
-			}
 			
 			document.getElementById("fullscreenButton").onclick = expandIframe;
 			document.getElementById("exitButton").onclick = expandIframe;
