@@ -13,10 +13,6 @@
 
 		gtag('config', 'G-L2XQZ2F8P3');
 	</script>
-
-
-
-
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -561,24 +557,24 @@
 		  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 		  z-index: 500;
 		  overflow: hidden;
-		  transition: height 0.3s ease;
+		  transition: height 0.5s ease;
 		  user-select: none;
 		}
-		
+	
 		.sidebar-header {
 		  display: flex;
 		  align-items: center;
 		  padding: 10px;
 		  background-color: #ffffff;
 		  border-bottom: 1px solid #eaeaea;
-		  cursor: move; /* Shows a move cursor when hovering over the header */
+		  cursor: move;
 		}
-		
+	
 		.sidebar-header p {
 		  margin: 0;
 		  font-weight: bold;
 		}
-		
+	
 		.sidebar-header button {
 		  background: none;
 		  border: none;
@@ -587,18 +583,20 @@
 		  margin-left: auto;
 		  z-index: 2; /* Ensure button stays clickable */
 		}
-		
+	
 		.sidebar-header button:hover {
 		  color: #000;
 		}
-		
-		.sidebar-box img {
+	
+		.vidya {
+		  height: 100%;
 		  width: 100%;
 		  display: block;
+		  border: none;
 		}
-		
+	
 		.collapsed {
-		  height: 40px;
+		  height: 40px !important;
 		}
 	  </style>
 	</head>
@@ -608,7 +606,7 @@
 		  <p>Hi... How may I help you?</p>
 		  <button onclick="toggleSidebar()"><i class="material-icons">remove</i></button>
 		</div>
-		<img src="images/image.webp" alt="Chat avatar">
+		<iframe class="vidya" src="https://example.com/"></iframe>
 	  </div>
 	
 	  <script>
@@ -616,71 +614,66 @@
 		function toggleSidebar() {
 		  const sidebar = document.getElementById('sidebarBox');
 		  const button = sidebar.querySelector('button i');
-		  const text = sidebar.querySelector('p')
-		  
-		  if (sidebar.style.height === '40px' || sidebar.classList.contains('collapsed')) {
-			sidebar.style.height = 'auto';
-			sidebar.classList.remove('collapsed');
-			button.textContent = 'remove';
-			text.textContent = 'Hi... How may I help you?'
-		  } else {
+		  const text = sidebar.querySelector('p');
+	
+		  if (!sidebar.classList.contains('collapsed')) {
+			// Collapse sidebar
 			sidebar.style.height = '40px';
 			sidebar.classList.add('collapsed');
 			button.textContent = 'keyboard_arrow_up';
-			text.textContent = 'Got any doubts? Ask Vidya'
+			text.textContent = 'Got any doubts? Ask Vidya';
+		  } else {
+			// Expand sidebar
+			sidebar.style.height = '430px';
+			sidebar.classList.remove('collapsed');
+			button.textContent = 'remove';
+			text.textContent = 'Hi... How may I help you?';
 		  }
 		}
-		
+	
 		// Make the element draggable
 		function makeDraggable(element, dragHandle) {
 		  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-		  
+	
 		  dragHandle.addEventListener('mousedown', dragMouseDown);
-		  
+	
 		  function dragMouseDown(e) {
 			e.preventDefault();
-			// Get the mouse cursor position at startup
 			pos3 = e.clientX;
 			pos4 = e.clientY;
 			document.addEventListener('mouseup', closeDragElement);
 			document.addEventListener('mousemove', elementDrag);
 		  }
-		  
+	
 		  function elementDrag(e) {
 			e.preventDefault();
-			// Calculate the new cursor position
 			pos1 = pos3 - e.clientX;
 			pos2 = pos4 - e.clientY;
 			pos3 = e.clientX;
 			pos4 = e.clientY;
-			
-			// Set the element's new position
-			const newTop = (element.offsetTop - pos2);
-			const newLeft = (element.offsetLeft - pos1);
-			
-			// Make sure the element stays within the viewport
+	
+			const newTop = element.offsetTop - pos2;
+			const newLeft = element.offsetLeft - pos1;
+	
 			const maxX = window.innerWidth - element.offsetWidth;
 			const maxY = window.innerHeight - element.offsetHeight;
-			
+	
 			element.style.top = Math.min(Math.max(0, newTop), maxY) + "px";
 			element.style.left = Math.min(Math.max(0, newLeft), maxX) + "px";
 			element.style.right = 'auto';
 			element.style.bottom = 'auto';
 		  }
-		  
+	
 		  function closeDragElement() {
-			// Stop moving when mouse button is released
 			document.removeEventListener('mouseup', closeDragElement);
 			document.removeEventListener('mousemove', elementDrag);
 		  }
 		}
-		
+	
 		// Initialize draggable functionality
 		const sidebarBox = document.getElementById('sidebarBox');
 		const sidebarHeader = document.getElementById('sidebarHeader');
 		makeDraggable(sidebarBox, sidebarHeader);
 	  </script>
-
-</body>
-
-</html>
+	</body>
+	</html>
