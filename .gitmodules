@@ -1,6 +1,6 @@
-[submodule "vidya-frontend"]
-	path = vidya-frontend
-	url = https://github.com/hrideshmg/viyda-frontend-build
 [submodule "viya-backend"]
 	path = viya-backend
 	url = https://github.com/hrideshmg/viya-backend
+[submodule "viyda-frontend-build"]
+	path = viyda-frontend-build
+	url = https://github.com/hrideshmg/viyda-frontend-build
