@@ -4244,7 +4244,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-static-top {
-  z-index: 1000;
+  z-index: 500;
   border-width: 0 0 1px;
 }
 @media (min-width: 768px) {
@@ -4257,7 +4257,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: fixed;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 530;
 }
 @media (min-width: 768px) {
   .navbar-fixed-top,
