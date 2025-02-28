@@ -1,0 +1,472 @@
+.menuText {
+	/* font-family: Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;	
+	font-size: 16px;
+	font-weight: normal;
+	color: #333;
+}
+.title-box-round{display:block}
+.title-box-round *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#3B3B3B}
+.title-box-round1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #aaaaaa;
+  border-right:1px solid #aaaaaa;
+  background:#6c6c6c}
+.title-box-round2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #ebebeb;
+  border-right:1px solid #ebebeb;
+  background:#606060}
+.title-box-round3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #606060;
+  border-right:1px solid #606060;}
+.title-box-round4{
+  border-left:1px solid #aaaaaa;
+  border-right:1px solid #aaaaaa}
+.title-box-round5{
+  border-left:1px solid #6c6c6c;
+  border-right:1px solid #6c6c6c}
+.title-box-roundfg{
+  background:#ffffff}
+.title-sub{
+	  /* font:Arial, Tahoma, sans-serif; */
+	  font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;	  
+	  color:#000;
+	  size:14px;
+	  text-align:justify;
+	  line-height:16px;
+	  padding-right:10px;
+	  padding-left:10px;
+  }
+
+.yellowBox{display:block}
+.yellowBox *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#CF7730;
+  }
+.yellowBox1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #eac2a2;
+  border-right:1px solid #eac2a2;
+  background:#db9862}
+.yellowBox2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #faede4;
+  border-right:1px solid #faede4;
+  background:#d89056}
+.yellowBox3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #d89056;
+  border-right:1px solid #d89056;}
+.yellowBox4{
+  border-left:1px solid #eac2a2;
+  border-right:1px solid #eac2a2}
+.yellowBox5{
+  border-left:1px solid #db9862;
+  border-right:1px solid #db9862}
+.yellowBoxfg{
+  background:#CF7730}
+
+
+
+.title-main-page {
+	/* font-family:Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;	
+	font-size: 21px;
+	color:#000;
+	font-weight:normal;
+	padding: 3px;
+}
+.subjects {
+	/* font-family: Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;	
+	font-size: 20px;
+	font-weight:lighter;
+	color: ffddc1;
+	padding-left:80px;
+}
+.subjects a{
+color: ffddc1;
+text-decoration:none;
+
+}
+.subjects a:hover{
+	text-decoration:none;
+}
+.subjects-small {
+	/* font-family: Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+	font-size: 12px;
+	font-weight: lighter;
+	color: #49465E;
+	padding-left: 80px;
+}
+* html #main{
+	width:60%;
+	height:60%;
+	border:solid;
+
+}
+
+.yellowBoxHead {
+	/* font-family: Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+	font-size: 12px;
+	font-weight: normal;
+	color: #FFF;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+.text-yellowBox {
+	/* font-family: Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;	
+	font-size: 12px;
+	line-height:18px;
+	color: #6b6868;
+	text-align:justify;
+	padding-right:10px;
+		
+}
+
+.text-yellowBox:first_line{
+	/* font-family:Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+	font-size: 12px;
+	color: #666;
+	font-weight:normal;
+	/*text-decoration:underline;*/
+}
+	
+.featuredTitle {
+	/* font-family: Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;	
+	font-size: 14px;
+	font-weight:bold;
+	color: #666666;
+	}
+.dashboardBtn
+{
+	background-image:url('../images/enter_dash.jpg');
+	height:37px;
+	width:140px;
+	border:none;	
+	background-color:Transparent;
+	color:#FFF;
+	margin-bottom:5px;
+}
+.dashboardBtnPar
+{
+	text-align:center;
+}
+.contentTitle {
+	/* font-family: Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+	font-size: 18px;
+	color: #000;
+	font-weight: normal;
+	padding-left:50px;
+	padding-right:50px;
+}
+.contentEquation {
+	/* font-family: Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+	font-size: 18px;
+	padding-left:50px;
+	padding-right:50px;
+}
+.contentTitleSmall {
+	/* font-family: Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+	font-size: 14px;
+	color: #000;
+	font-weight: normal;
+	padding-left:50px;
+	padding-right:50px;
+}
+.content {
+	/* font-family: Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;	
+	font-size: 12px;
+	color: #000;
+	text-align: justify;
+	padding-right: 50px;
+	padding-left: 50px;
+	list-style-position: inside;
+	list-style-type: circle;
+}
+.main-heading{
+	/* font-family:Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+	font-size:28px;
+	text-align:left;
+	color:#fc8114;
+	padding-top:25px;
+	padding-left:15px;
+	text-decoration:none;
+}
+ 
+.main-heading a:hover{
+	text-decoration:none;
+	border-bottom:none;
+
+}
+.sub-heading{
+	/* font-family:Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+	font-size:12px;
+	font-weight:normal;
+	position:absolute;
+	color:#a1a1a1;
+	text-align:left;
+	padding-top:15px;
+	padding-left:15px;
+}
+*html .sub-heading{
+	/* font-family: Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;	
+	font-size:12px;
+	font-weight:normal;
+	position:absolute;
+	color:#a1a1a1;
+	text-align:left;
+	padding-top:15px;
+	padding-left:10px;
+}
+a.sub-heading:hover{
+	color:#9C3;
+	text-decoration:none;
+}
+
+/*ul#display-inline-block-example,
+ul#display-inline-block-example li {
+/* Setting a common base */
+/*margin:0;
+padding:0;
+}*/
+
+ul#display-inline-block-example li {
+display: inline-block;
+width: 14px;
+min-height: 100px;
+background: #ccc;
+}
+
+/* for IE only */
+* html ul#display-inline-block-example li {
+display:inline;
+width: 14px;
+min-height: 100px;
+background: #ccc;
+padding-left:5%;
+}
+
+#Main-menu{
+text-align:right;
+}
+ul#Main-menu li {
+display: inline-block;
+
+}
+.menu-name{
+	color:#000;
+	font-size:14px;
+	font-weight:normal;
+}
+/*#Main-menu li a:hover{
+	text-decoration:overline;
+
+	border-bottom:none;
+	min-height:20px;
+	min-width:100px;
+	background-position:100% -118px;
+}*/
+/*#main-menu li{
+/*float:left;*/
+/*display:block;
+background:url(images/HoverImg.jpg) no-repeat right top;*/
+
+
+/*#Main-menu li{
+	background:url(images/LeftEndmodi.jpg) no-repeat left top;
+	min-height:20px;
+	min-width:115px;
+	padding-bottom:15%;
+
+}*/
+.clsleft{
+	background:url(images/LeftEnd.jpg) no-repeat;
+	font-size:13px;
+	font-weight:normal;
+	color:#09F;
+	border-bottom:none;
+	text-decoration:none;
+	padding-left:50;
+	padding-right:50px;
+	padding-top:15px;
+	padding-bottom:15px;
+	
+	/*text-align:center;
+	font-size:13px;
+	font-weight:bold;
+	padding-right:50px;
+	padding-bottom:15.5%;
+	margin-top:20%;*/
+	
+}
+.clsleft:hover{
+	/*background:url(images/LeftEndhover.jpg) no-repeat;
+	color:#FFF;*/
+	
+}
+.clsmiddle{
+	/*background:url(images/Middle.jpg) no-repeat;
+	text-align:center;
+	font-size:13px;
+	font-weight:bold;
+	padding-right:70%;
+	padding-bottom:15.5%;
+	margin-top:20%;*/
+	background:url(images/Middle.jpg) no-repeat;
+	font-size:13px;
+	font-weight:normal;
+	color:#09F;
+	border-bottom:none;
+	text-decoration:none;
+	padding-left:50;
+	padding-right:50px;
+	padding-top:15px;
+	padding-bottom:15px;
+
+		
+}
+.clsmiddle:hover{
+	/*background:url(images/Middlehover.jpg) no-repeat;
+	color:#FFF;*/
+	
+}
+.clsright{
+	/*background:url(images/RightEnd.jpg) no-repeat;
+	text-align:center;
+	font-size:13px;
+	font-weight:bold;
+	padding-right:70%;
+	padding-bottom:15.5%;
+	margin-top:20%;*/
+	}
+.clsright:hover{
+	/*background:url(images/RightEndhover.jpg) no-repeat;
+	color:#FFF;*/
+	
+}
+.slideshow { 
+margin: auto; 
+}
+.slideshow img 
+{
+}
+.MiddleBg{
+		width:59px;
+		float:left;
+		height:650px; 
+		overflow:hidden;
+	}
+*html .MiddleBg{
+		width:57px;
+		float:left;
+		height:650px; 
+		overflow:hidden;
+	}
+.homeTxt {
+	/* font-family: Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+	font-size: 14px;
+	line-height:18px;
+	text-align:justify;
+	}
+.homeListTxt{
+	/* font-family: Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+	font-size: 14px;
+	line-height:18px;
+	color:#000000;
+
+	}
+.homeSlideTxt {
+	/* font-family: Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+	font-size: 14px;
+	line-height:18px;
+	color:#000000;
+	text-align:justify;
+	}
+.mainLabLink a p {
+	padding:20px 9px 0px 38px;
+	margin:0px;
+	font-size:40px;
+	display:block;
+	width:439px;
+	text-transform:uppercase;
+
+	}
+.mainLabLink a {
+	text-decoration:none;
+	/* font-family:Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+	font-smooth:always;
+	-webkit-font-smoothing: antialiased !important;
+	color:#fc802d;
+	
+	}
+	.mainLabLink a span {
+	text-decoration:none;
+	display:block;
+	width:341px;
+	padding:0px 9px 20px 38px;
+	/* font-family:Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;	
+	font-size:12px;
+	font-smooth:always;
+	-webkit-font-smoothing: antialiased !important;
+	color:#999999;
+	font-weight:600;
+	
+	}
+.mainLabLink a:hover {
+	text-decoration:none;
+	/* font-family:Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+	font-size:40px;
+	color:#ff6600;
+}
+.mainLabLink a:hover>span {
+	text-decoration:none;
+	/* font-family:Arial, Tahoma, sans-serif; */
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+	font-size:12px;
+	color:#666666;
+}

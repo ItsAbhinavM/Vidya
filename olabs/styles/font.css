@@ -1,0 +1,33 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosansmalayalam.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanstelugu.css);
+
+/* noto-sans-regular - devanagari */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/noto-sans-v6-devanagari-regular.eot'); /* IE9 Compat Modes */
+  src: local('Noto Sans'), local('NotoSans'),       
+       url('../fonts/Noto-Sans-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Noto-Sans-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Noto_Sans_Devanagari/NotoSansDevanagari-VariableFont_wdth\,wght.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/noto-sans-v6-devanagari-regular.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-700 - devanagari */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/noto-sans-v6-devanagari-700.eot'); /* IE9 Compat Modes */
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'),       
+      url('../fonts/Noto-Sans-regular.woff2') format('woff2'), /* Super Modern Browsers */
+      url('../fonts/Noto-Sans-regular.woff') format('woff'), /* Modern Browsers */
+      url('../fonts/Noto_Sans_Devanagari/NotoSansDevanagari-VariableFont_wdth\,wght.ttf') format('truetype'), /* Safari, Android, iOS */
+      url('../fonts/noto-sans-v6-devanagari-700.svg#NotoSans') format('svg'); /* Legacy iOS */
+}
+
+ 
+/* *{
+	font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif !important ;
+ }  */
+ 

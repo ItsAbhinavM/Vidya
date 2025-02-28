@@ -1,0 +1,607 @@
+.glowingtabs{
+    width:100%;
+    line-height:normal;
+    color:#F00;
+    
+    
+    /*margin-top:.8%;*/
+    /*border-bottom: 2px solid #7e9fff; /*Add border strip to bottom of menu*/
+    }
+    
+    .glowingtabs a:hover{
+        border-bottom:none;
+    }
+    
+    .glowingtabs ul{
+    position:relative;
+    list-style-type: none;
+    margin:0px;
+    margin-left:0px; /*Left offset of entire tab menu relative to page*/
+    padding:0px;
+    white-space:nowrap;
+    }
+    
+    .glowingtabs li{
+    padding:0px;
+    font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+    font-weight:bold;
+    font-size:.9em;
+    display:inline-block;
+    list-style-type:none;
+    }
+    
+    .glowingtabs a{
+    float:left;
+    background:url(images/tableft.png) no-repeat left top;
+    margin:9px 0px 0px 0px;
+    padding:0px 0px 0px 11px; /*controls the space between the left and right image */
+    text-decoration:none;
+    border-bottom:none;
+    border:none;
+    /*width:160px;*/
+    }
+    
+    .glowingtabs a span{
+    float:left;
+    height:64px;
+    display:block;
+    background:url(images/tabright.png) no-repeat right top;
+    width:100%;
+    padding: 0px 7px 15px 0px;
+    color:#3B3B3B;
+    border-bottom:none;
+    margin-left:0px;
+    margin-right:0px;
+    }
+    
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    /*.glowingtabs a span {float:none;
+    }*/
+    /* End IE5-Mac hack */
+    
+    
+    .glowingtabs li.current a{
+        background-position:1px -78px; /*Shift background image up to start of 2nd tab image*/
+        /*background:url(images/Tab_03new.jpg) no-repeat;*/
+        /*width:160px;*/
+        text-decoration:none;
+    }
+    .glowingtabs li.current a:hover{
+        text-decoration:none;
+        border-bottom:none;
+    }
+    
+    .glowingtabs li.current a span{
+        background-position:100% -78px; /*Shift background image up to start of 2nd tab image*/
+        text-decoration:none;
+        border-bottom:none
+    }
+    
+    .tabcontainer{
+    clear: left;
+    width:95%; /*width of 2nd level sub menus*/
+    height:1.5em; /*height of 2nd level sub menus. Set to largest's sub menu's height to avoid jittering.*/
+    }
+    
+    .tabcontent{
+    display:none;
+    }
+    
+    .div1Style{
+    /*background-image:url(../images/subdiv_03.jpg);*/
+    margin-bottom:-50px;
+    padding-bottom:20px;
+    background-repeat:no-repeat;
+    margin-top:-15px;
+    /*background-size: 100%;*/
+    
+    }
+    /*.subdiv{
+    background-image:url(../images/subdiv_03.jpg);
+    background-repeat:no-repeat;
+    padding-right:1%;
+    
+    }*/
+    .div1Style1{
+    background-image:url(../images/BG_03.jpg);
+    padding-left:0px;
+    width:970px;
+    min-height:700px;
+    /*background-size: 100%;*/
+    }
+    .divContent{
+        /* margin-top:-80px; */
+        background-repeat:no-repeat;
+        padding-top:0px; 
+        text-align:left;
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        min-height:70px;
+        /* width:970px; */
+        margin-left:2%;
+        margin-right:auto;
+        /* word-wrap:break-word; */
+    }
+    
+    .divContent h1{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size:18px;
+        color: #000;
+        padding-left:15px;
+    }
+    .divContent h2{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        color: #000;
+        font-size:16px;
+        font-weight:normal;
+        padding-left:34px;
+    }
+    .divContent h3{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        color: #000;
+        font-size:14px;
+        font-weight:normal;
+        padding-left:34px;
+    }
+    .divContent h4{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        color: #000;
+        font-size:15px;
+        font-weight:normal;
+        padding-left:15px;
+    }
+    .divContent h5{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        color: #000;
+        font-size:14px;
+        font-weight:normal;
+        padding-left:15px;
+    }
+    .divContent p{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size: 14px;
+        color: #000;
+        text-align: justify;
+        padding-right:25px;
+        padding-left:35px;
+        line-height:18px;
+    }
+    .divContent div{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size: 14px;
+        color: #000;
+        text-align: justify;
+        /*padding-right:25px;
+        padding-left:35px;*/
+        line-height:18px;
+    }
+    .divContent ol{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size: 14px;
+        color: #000;
+        text-align: justify;
+        padding-right:25px;
+        padding-left:50px;
+        line-height:22px;
+    }
+    
+    .divContent ul{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size: 14px;
+        color: #000;
+        text-align: justify;
+        padding-right:25px;
+        padding-left:50px;
+        line-height:22px;
+    }
+    .divContent img{
+        margin:8px;
+        border:10px solid:#FFF;
+        max-width:100%;
+        max-height:100%;
+    }
+        
+    .divContent a {	
+        color: #000000;
+        text-decoration:none;
+    }
+    
+    .divContent a:hover {
+        color: #000000;
+        cursor:pointer;
+        text-decoration:underline;
+        border:none;
+    }
+    
+    .divContent table{
+        border-style:solid solid solid solid;
+        border:solid;
+        border-color:#999;
+        border-width:1px;
+    
+    }
+    .divContent td{
+        color:#000;
+        border:solid;
+        border-color:#999;
+        padding:5px 2px 2px 5px;
+        border-width:1px;
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size:14px;
+        
+    }
+    .divContent th{
+        
+        font-weight:normal;
+    
+        
+    }
+    .textHeadTabs {
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size: 16px;
+        /*padding-left: 13px;*/
+        text-align:center;
+        /*text-align: justify;*/
+        font-weight: normal;
+        /*text-transform: capitalize;*/
+    }
+    .textBlueHeadTabs {
+    
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size: 14px;
+        /*padding-left: 13px;*/
+        text-align:center;
+        /*text-align: justify;*/
+        font-weight: normal;
+        color: #003366;
+        background-color:#CCE3FF;
+    }
+    .tinyTextRedTabs {
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size: 12px;
+        color: #CC0000;
+        text-align:center;
+    }
+    
+    table.myTableTabs {
+        border-width: 2px 2px 2px 2px;
+        border-spacing: 2px;
+        border-style: solid solid solid solid;
+        border-color: #99CCFF;/*
+        border-color: #FFBD5B;*/
+        border-collapse: separate;
+        table-layout:fixed;
+        
+        }
+    
+    table.myTableTabs th {
+        border-width: 1px 1px 1px 1px;
+        padding: 1px 1px 1px 1px;
+        border-style: solid solid solid solid;
+        border-color: #99CCFF;
+        -moz-border-radius: 0px 0px 0px 0px;
+    }
+    
+    table.myTableTabs td {
+        border-width: 1px 1px 1px 1px;
+        padding: 1px 1px 1px 1px;
+        border-style: solid solid solid solid;
+        border-color: #99CCFF;
+        -moz-border-radius: 0px 0px 0px 0px;
+    }	
+    
+    .menuContent{
+        padding-top:10px; 
+        padding-left:29px; 
+        padding-right:25px;
+    }
+    
+    .menuContent h1{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size:18px;
+        color: #000;
+        padding-left:15px;
+    }
+    .menuContent h2{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        color: #000;
+        font-size:16px;
+        font-weight:normal;
+        padding-left:34px;
+    }
+    .menuContent h3{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        color: #000;
+        font-size:14px;
+        font-weight:normal;
+        padding-left:34px;
+    }
+    .menuContent h4{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        color: #000;
+        font-size:15px;
+        font-weight:normal;
+        padding-left:15px;
+    }
+    .menuContent h5{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        color: #000;
+        font-size:14px;
+        font-weight:normal;
+        padding-left:15px;
+    }
+    .menuContent p{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size: 14px;
+        color: #000;
+        text-align: justify;
+        padding-right:25px;
+        padding-left:35px;
+        line-height:18px;
+    }
+    .menuContent div{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size: 14px;
+        color: #000;
+        text-align: justify;
+        padding-right:25px;
+        padding-left:35px;
+        line-height:18px;
+    }
+    .menuContent ol{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size: 14px;
+        color: #000;
+        text-align: justify;
+        padding-right:25px;
+        padding-left:50px;
+        line-height:22px;
+    }
+    
+    .menuContent ul{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size: 14px;
+        color: #000;
+        text-align: justify;
+        padding-right:25px;
+        padding-left:50px;
+        line-height:22px;
+    }
+    .menuContent img{	
+        margin:8px;
+        border:10px solid:#FFF;
+        max-width:100%;
+    }
+        
+    .menuContent a {	
+        color: #009;
+        text-decoration:none;
+    }
+    
+    .menuContent a:hover {
+        /*color: #0000FF;*/
+        text-decoration:none;
+        /*border:none;*/
+        cursor:pointer;
+        
+        
+        
+    }
+    
+    .menuContent table{
+        border-style:solid solid solid solid;
+        border:solid;
+        border-color:#999;
+        border-width:1px;
+    
+    }
+    .menuContent td{
+        color:#000;
+        border:solid;
+        border-color:#999;
+        padding:5px 2px 2px 5px;
+        border-width:1px;
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size:14px;
+        
+    }
+    .menuContent th{
+        
+        font-weight:normal;
+    
+        
+    }
+    
+    #tab_name {
+        text-align:center;
+        vertical-align:top;
+        margin:25px 0px 0px 0px;
+            /*padding-right:45px;*/
+        padding-right:0px\9;
+        display:inline-block;
+    
+        
+    }
+    
+    #tabspan {
+        text-align:center;
+        margin:10px 0px 0px 0px;
+        /*float:left;*/
+        padding-top:3px;
+        display:inline-block;
+        
+        
+    }
+    
+    .divLink{
+        background-repeat:no-repeat;
+        padding-top:0px; 
+        /*background-color:#FFF;*/
+        text-align:left;
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        /* min-height:70px;
+        min-width:970px; */
+        margin: -80px auto -50px auto;
+    }
+    
+    .divQuiz{
+        margin-top:-80px;
+        width:970px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .divQuizHint{
+        padding-left:50px;
+        width:970px;
+    }
+    
+    /*fckQuiz*/
+    .fckQuiz{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size: 12px;
+        color: none;
+        text-align: justify;
+        padding-right:none;
+        padding-left:none;
+        line-height:none;
+    }
+    .fckQuiz img{
+        border: none;	
+    }
+    .fckQuiz table{	
+        border:none;	
+    }
+    .fckQuiz table td{
+        border:none;
+        padding-left:0px;
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size: 12px;
+    }
+    .fckQuiz div{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size: 12px;
+        color: none;
+        text-align: none;
+        padding-right:none;
+        padding-left:none;
+        line-height:none;
+    }
+    .divFeedBack{
+        padding-left: 29px;
+        padding-right: 25px;
+        padding-top: 10px;
+        width: 920px;
+    }
+    .divRemoteTrigger
+    {
+        width:970px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .responsive_table{
+         width: 60%;
+         height:100%;
+    }
+    /* #lcurve {
+        background:url(../images/lab_bg_lcurve.gif) no-repeat bottom right;
+        color:#FFF;
+        width:21px;
+        height:180px;
+        }
+        #lcurve:before {
+        
+        content:"\0000a0\0000a0\0000a0\0000a0\0000a0";
+        }
+    #rcurve {
+        background:url(../images/lab_bg_rcurve.gif) no-repeat bottom left;
+        color:#FFF;
+        width:21px;
+        height:145px;
+        }
+        #rcurve:before {
+        
+        content:"\0000a0\0000a0\0000a0\0000a0\0000a0";
+        }
+    #mcurve {
+        background:url(../images/lab_bg_mid.gif) repeat-x bottom left;
+        vertical-align:top;
+        } */
+    #tabtable {
+        width:100%;
+        }
+    .divPageNotFound{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        font-size:14px;
+        height:400px;
+        width:900px;
+        background-color:#FFFFFF;
+        padding-top:10px; 
+        padding-left:15px;
+        padding-bottom:30px;
+        padding-right:10px;
+    }
+    .divPageNotFound p{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        padding-left:15px;
+        font-size:14px;
+    }
+    .divPageNotFoundHeadding{
+        font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+        background-color:#FFFFFF;
+        padding-left:10px;
+        padding-bottom:20px;
+        font-size:36px;
+    }
+    .greyTable {
+            border:solid 1px #CCC !important;
+            border-collapse:collapse;
+            color: #000000;
+            font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+            font-size: 14px;
+            }
+        .greyTable th {
+            text-align:left;
+            border:solid 1px #CCC;
+            background-color:#666;
+            padding:10px 4%;
+            color:#FFF;
+            }
+        .greyTable td {
+            border-right:solid 1px #CCC;
+            padding: 10px 4%;
+            border-left:none;
+            border-top:none;
+            border-bottom:none;
+            }
+        .greyTable tr:nth-child(odd) {
+            background-color:#F1F1F1;
+            }
+        .greyTable tr:nth-child(even) {
+            background-color:#FFF;
+            }
+    .redTable {
+            border:solid 1px #CCC !important;
+            border-collapse:collapse;
+            color: #000000;
+            font-family: 'Noto Sans','Noto Sans Malayalam','Noto Sans Telugu', sans-serif ;
+            font-size: 14px;
+            }
+        .redTable th {
+            text-align:left;
+            border:solid 1px #CCC;
+            background-color:#CC3300;
+            padding:10px 4%;
+            color:#FFF;
+            }
+        .redTable td {
+            border-right:solid 1px #CCC;
+            padding: 10px 4%;
+            border-left:none;
+            border-top:none;
+            border-bottom:none;
+            }
+        .redTable tr:nth-child(odd) {
+            background-color:#F1F1F1;
+            }
+        .redTable tr:nth-child(even) {
+            background-color:#FFF;
+            }
