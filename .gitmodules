@@ -1,3 +1,6 @@
-[submodule "Open-LLM-VTuber-Web"]
-	path = Open-LLM-VTuber-Web
-	url = https://github.com/hrideshmg/Open-LLM-VTuber-Web
+[submodule "vidya-frontend"]
+	path = vidya-frontend
+	url = https://github.com/hrideshmg/viyda-frontend-build
+[submodule "viya-backend"]
+	path = viya-backend
+	url = https://github.com/hrideshmg/viya-backend
