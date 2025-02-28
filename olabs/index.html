@@ -155,7 +155,6 @@
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 
-
 	<div class="container" style="background-color:#e8e8e8;">
 		<div class="row">
 			<div class="col-md-12">
@@ -547,9 +546,140 @@
 		</div>
 	</div>
 
-
 	<script type="text/javascript" src="js/javascript_functions.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+	<style>
+		.sidebar-box {
+		  position: fixed;
+		  right: 15px;
+		  bottom: 15px;
+		  width: 300px;
+		  height: 430px;
+		  background-color: #f8f8f8;
+		  border-radius: 15px;
+		  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		  z-index: 500;
+		  overflow: hidden;
+		  transition: height 0.3s ease;
+		  user-select: none;
+		}
+		
+		.sidebar-header {
+		  display: flex;
+		  align-items: center;
+		  padding: 10px;
+		  background-color: #ffffff;
+		  border-bottom: 1px solid #eaeaea;
+		  cursor: move; /* Shows a move cursor when hovering over the header */
+		}
+		
+		.sidebar-header p {
+		  margin: 0;
+		  font-weight: bold;
+		}
+		
+		.sidebar-header button {
+		  background: none;
+		  border: none;
+		  cursor: pointer;
+		  color: #555;
+		  margin-left: auto;
+		  z-index: 2; /* Ensure button stays clickable */
+		}
+		
+		.sidebar-header button:hover {
+		  color: #000;
+		}
+		
+		.sidebar-box img {
+		  width: 100%;
+		  display: block;
+		}
+		
+		.collapsed {
+		  height: 40px;
+		}
+	  </style>
+	</head>
+	<body>
+	  <div class="sidebar-box" id="sidebarBox">
+		<div class="sidebar-header" id="sidebarHeader">
+		  <p>Hi... How may I help you?</p>
+		  <button onclick="toggleSidebar()"><i class="material-icons">remove</i></button>
+		</div>
+		<img src="images/image.webp" alt="Chat avatar">
+	  </div>
+	
+	  <script>
+		// Toggle sidebar expand/collapse
+		function toggleSidebar() {
+		  const sidebar = document.getElementById('sidebarBox');
+		  const button = sidebar.querySelector('button i');
+		  const text = sidebar.querySelector('p')
+		  
+		  if (sidebar.style.height === '40px' || sidebar.classList.contains('collapsed')) {
+			sidebar.style.height = 'auto';
+			sidebar.classList.remove('collapsed');
+			button.textContent = 'remove';
+			text.textContent = 'Hi... How may I help you?'
+		  } else {
+			sidebar.style.height = '40px';
+			sidebar.classList.add('collapsed');
+			button.textContent = 'keyboard_arrow_up';
+			text.textContent = 'Got any doubts? Ask Vidya'
+		  }
+		}
+		
+		// Make the element draggable
+		function makeDraggable(element, dragHandle) {
+		  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+		  
+		  dragHandle.addEventListener('mousedown', dragMouseDown);
+		  
+		  function dragMouseDown(e) {
+			e.preventDefault();
+			// Get the mouse cursor position at startup
+			pos3 = e.clientX;
+			pos4 = e.clientY;
+			document.addEventListener('mouseup', closeDragElement);
+			document.addEventListener('mousemove', elementDrag);
+		  }
+		  
+		  function elementDrag(e) {
+			e.preventDefault();
+			// Calculate the new cursor position
+			pos1 = pos3 - e.clientX;
+			pos2 = pos4 - e.clientY;
+			pos3 = e.clientX;
+			pos4 = e.clientY;
+			
+			// Set the element's new position
+			const newTop = (element.offsetTop - pos2);
+			const newLeft = (element.offsetLeft - pos1);
+			
+			// Make sure the element stays within the viewport
+			const maxX = window.innerWidth - element.offsetWidth;
+			const maxY = window.innerHeight - element.offsetHeight;
+			
+			element.style.top = Math.min(Math.max(0, newTop), maxY) + "px";
+			element.style.left = Math.min(Math.max(0, newLeft), maxX) + "px";
+			element.style.right = 'auto';
+			element.style.bottom = 'auto';
+		  }
+		  
+		  function closeDragElement() {
+			// Stop moving when mouse button is released
+			document.removeEventListener('mouseup', closeDragElement);
+			document.removeEventListener('mousemove', elementDrag);
+		  }
+		}
+		
+		// Initialize draggable functionality
+		const sidebarBox = document.getElementById('sidebarBox');
+		const sidebarHeader = document.getElementById('sidebarHeader');
+		makeDraggable(sidebarBox, sidebarHeader);
+	  </script>
 
 </body>
 
