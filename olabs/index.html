@@ -628,7 +628,7 @@
 		</div>
 
 		<script>
-			let vidyacopy = '';
+			let vidyacopy = 'http://localhost:12393/'
 
 			document.addEventListener("DOMContentLoaded", function () {
 				const sidebar = document.getElementById('sidebarBox');
@@ -654,7 +654,7 @@
 					// sidebar.style.height = '40px';
 					sidebar.classList.add('collapsed');
 					button.textContent = 'keyboard_arrow_up';
-					vidyacopy = vidya.src;
+					// vidyacopy = ""
 					vidya.src = '';
 					text.textContent = 'Got any doubts? Ask Vidya';
 				} else {
