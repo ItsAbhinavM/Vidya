@@ -140,7 +140,7 @@
 </head>
 
 <body>
-
+	<button style="position: fixed; right: 0; top: 10; display: none; z-index: 100000;" id="exitButton"><i class="material-icons">fullscreen_exit</i></button>
 	<script>
 		(function (d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
@@ -167,12 +167,12 @@
 			<div class="col-md-12">
 				<nav class="navbar navbar-default navbar-static-top" role="navigation">
 					<div class="menu">
-						<div class="navbar-header"><button type="button" id="homePageToggle" class="navbar-toggle"
+						<div class="navbar-header"><button type="button" class="navbar-toggle"
 								data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span
 									class="sr-only"></span><span class="icon-bar"></span><span
 									class="icon-bar"></span><span class="icon-bar"></span></button><a
 								class="navbar-brand" href="https://www.olabs.edu.in/">Home</a></div>
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" id="mainHeader">
 							<ul class="nav navbar-nav">
 								<li class="dropdown"><a href="?pg=topMenu&id=6" class="dropdown-toggle"
 										data-toggle="dropdown">About&nbsp;<b class="caret"></b></a>
@@ -609,6 +609,17 @@
 		.collapsed {
 		  height: 40px !important;
 		}
+		.fullscreen-iframe {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 1000;
+		background: white;
+		border-radius: 0;
+		}
+
 	  </style>
 	</head>
 	<body>
@@ -617,7 +628,7 @@
 		  <p style="padding-left: 5px;padding-bottom: 12px;padding-top: 10px;">Hi! how may I help you?</p>
 		  <div>
 			<button onclick="toggleSidebar()"><i class="material-icons">remove</i></button>
-		  	<button onclick=""><i class="material-icons">fullscreen</i></button>
+		  	<button id="fullscreenButton" onclick="expandIframe()"><i class="material-icons">fullscreen</i></button>
 		  </div>
 		</div>
 		<iframe id='vidya' src="http://localhost:12393/" allow="camera; microphone"></iframe>
@@ -625,11 +636,12 @@
 	
 	  <script>
 		let vidyacopy = '';
-		function toggleSidebar() {1
+		function toggleSidebar() {
 		  const sidebar = document.getElementById('sidebarBox');
 		  const button = sidebar.querySelector('button i');
 		  const text = sidebar.querySelector('p');
-		  const vidya = document.getElementById('vidya');
+		  const vidya = document.getElementById('vidya');		
+
 		  if (!sidebar.classList.contains('collapsed')) {
 			// sidebar.style.height = '40px';
 			sidebar.classList.add('collapsed');
@@ -642,13 +654,37 @@
 			sidebar.classList.remove('collapsed');
 			button.textContent = 'remove';
 			text.textContent = 'Hi... How may I help you?';
-			// text.style.paddingBottom='10px'
-			// text.style.paddingLeft='5px'
 			if (vidyacopy) {
         	vidya.src = vidyacopy;
       }
 		  }
 		}
+		function expandIframe() {
+			const iframe = document.getElementById("vidya");
+			const expandButton = document.getElementById("fullscreenButton");
+			const exitButton = document.getElementById("exitButton");
+			console.log('before going to if loops')
+			
+			expandButton.addEventListener("click",function() {
+				console.log('button is clicked');
+				iframe.classList.add("fullscreen-iframe");
+				expandButton.textContent = "fullscreen_exit";
+				exitButton.style.display="block";
+				exitButton.style.marginRight='15px';
+				exitButton.style.marginTop='15px';
+				console.log('exit button style has been changed');
+			})
+
+			exitButton.addEventListener("click", function() {
+				console.log("Exit button is clicked");
+				iframe.classList.remove("fullscreen-iframe");
+				expandButton.innerHTML = '<i class="material-icons">fullscreen</i>';
+				// exitButton.querySelector("i").textContent="close";
+				exitButton.style.display="none";
+			})
+			
+		}
+
 	
 		function makeDraggable(element, dragHandle) {
 		  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
