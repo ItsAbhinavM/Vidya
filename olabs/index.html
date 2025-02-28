@@ -62,7 +62,8 @@
 			margin-top: 20px;
 			font-size: 24px;
 			vertical-align: middle;
-			margin-left: 7p margin-right: 5px;
+			margin-left: 7p;
+			margin-right: 5px;
 			/*
 	border:2px solid black;
 	text-align:center;
@@ -564,8 +565,11 @@
 	
 		.sidebar-header {
 		  display: flex;
+		  justify-content: space-between;
 		  align-items: center;
-		  padding: 10px;
+		  padding-left: 10px;
+		  padding-right: 10px;
+		  padding-bottom: 10px;
 		  background-color: #ffffff;
 		  border-bottom: 1px solid #eaeaea;
 		  cursor: move;
@@ -574,6 +578,7 @@
 		.sidebar-header p {
 		  margin: 0;
 		  font-weight: bold;
+		  margin-top: '10px';
 		}
 	
 		.sidebar-header button {
@@ -609,15 +614,18 @@
 	<body>
 	  <div class="sidebar-box" id="sidebarBox">
 		<div class="sidebar-header" id="sidebarHeader">
-		  <p>Hi... How may I help you?</p>
-		  <button onclick="toggleSidebar()"><i class="material-icons">remove</i></button>
+		  <p style="padding-left: 5px;padding-bottom: 12px;padding-top: 10px;">Hi... How may I help you?</p>
+		  <div>
+			<button onclick="toggleSidebar()"><i class="material-icons">remove</i></button>
+		  	<button onclick=""><i class="material-icons">fullscreen</i></button>
+		  </div>
 		</div>
 		<iframe id='vidya' src="http://localhost:12393/" allow="camera; microphone"></iframe>
 	  </div>
 	
 	  <script>
 		let vidyacopy = '';
-		function toggleSidebar() {
+		function toggleSidebar() {1
 		  const sidebar = document.getElementById('sidebarBox');
 		  const button = sidebar.querySelector('button i');
 		  const text = sidebar.querySelector('p');
@@ -634,6 +642,8 @@
 			sidebar.classList.remove('collapsed');
 			button.textContent = 'remove';
 			text.textContent = 'Hi... How may I help you?';
+			// text.style.paddingBottom='10px'
+			// text.style.paddingLeft='5px'
 			if (vidyacopy) {
         	vidya.src = vidyacopy;
       }
