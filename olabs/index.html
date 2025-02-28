@@ -610,28 +610,37 @@
 	  </div>
 	
 	  <script>
-		// Toggle sidebar expand/collapse
 		function toggleSidebar() {
 		  const sidebar = document.getElementById('sidebarBox');
 		  const button = sidebar.querySelector('button i');
 		  const text = sidebar.querySelector('p');
 	
 		  if (!sidebar.classList.contains('collapsed')) {
-			// Collapse sidebar
-			sidebar.style.height = '40px';
-			sidebar.classList.add('collapsed');
-			button.textContent = 'keyboard_arrow_up';
-			text.textContent = 'Got any doubts? Ask Vidya';
-		  } else {
-			// Expand sidebar
-			sidebar.style.height = '430px';
-			sidebar.classList.remove('collapsed');
-			button.textContent = 'remove';
-			text.textContent = 'Hi... How may I help you?';
-		  }
+        sidebar.style.height = '40px';
+        sidebar.classList.add('collapsed');
+        button.textContent = 'keyboard_arrow_up';
+        text.textContent = 'Got any doubts? Ask Vidya';
+        if (iframe) {
+          iframe.remove();
+        }
+      } else {
+        sidebar.style.height = '430px';
+        sidebar.classList.remove('collapsed');
+        button.textContent = 'remove';
+        text.textContent = 'Hi... How may I help you?';
+        if (!sidebar.querySelector('.vidya')) {
+          const newIframe = document.createElement('iframe');
+          newIframe.className = 'vidya';
+          newIframe.src = 'https://example.com/';
+          newIframe.style.width = '100%';
+          newIframe.style.height = '100%';
+          newIframe.style.display = 'block';
+          newIframe.style.border = 'none';
+          sidebar.appendChild(newIframe);
+        }
+      }
 		}
 	
-		// Make the element draggable
 		function makeDraggable(element, dragHandle) {
 		  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 	
@@ -670,7 +679,6 @@
 		  }
 		}
 	
-		// Initialize draggable functionality
 		const sidebarBox = document.getElementById('sidebarBox');
 		const sidebarHeader = document.getElementById('sidebarHeader');
 		makeDraggable(sidebarBox, sidebarHeader);
