@@ -608,6 +608,7 @@
 			height: 100vh;
 			z-index: 1000;
 			background: white;
+			transition: all 2s ease;
 			border-radius: 0;
 		}
 	</style>
@@ -666,7 +667,7 @@
 					}
 				}
 			}
-			function expandIframe() {
+			async function expandIframe() {
 				const iframe = document.getElementById("vidya");
 				const sidebar= document.getElementById("sidebarBox");
 				const sidebarHeader = document.getElementById('sidebarHeader')
@@ -675,11 +676,11 @@
 				console.log('before going to if loops')
 
 				expandButton.addEventListener("click", function () {
-					// sidebarHeader.style.display='none';
+					sidebarHeader.style.display='none';
 					console.log('button is clicked');
 					sidebar.classList.add("fullscreen");
     				expandButton.innerHTML = '<i class="material-icons">fullscreen_exit</i>';
-					iframe.classList.add("fullscreen-iframe");
+					// iframe.classList.add("fullscreen-iframe");
 					expandButton.textContent = "fullscreen_exit";
 					exitButton.style.display = "block";
 					exitButton.style.marginRight = '15px';
@@ -696,9 +697,10 @@
 					// exitButton.querySelector("i").textContent="close";
 					exitButton.style.display = "none";
 				})
-
 			}
-
+			
+			document.getElementById("fullscreenButton").onclick = expandIframe;
+			document.getElementById("exitButton").onclick = expandIframe;
 
 			function makeDraggable(element, dragHandle) {
 				let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
