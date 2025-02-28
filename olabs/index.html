@@ -538,7 +538,7 @@
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 			z-index: 500;
 			overflow: hidden;
-			transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease;
 			user-select: none;
 			resize: both;
 		}
@@ -614,7 +614,7 @@
 	</head>
 
 	<body>
-		<div class="sidebar-box collapsed" id="sidebarBox">
+		<div class="sidebar-box" id="sidebarBox">
 			<div class="sidebar-header" id="sidebarHeader">
 				<p style="padding-left: 5px;padding-bottom: 12px;padding-top: 10px;">Hi! how may I help you?</p>
 				<div>
@@ -628,6 +628,21 @@
 
 		<script>
 			let vidyacopy = '';
+
+			document.addEventListener("DOMContentLoaded", function () {
+				const sidebar = document.getElementById('sidebarBox');
+				const button = sidebar.querySelector('button i');
+				const text = sidebar.querySelector('p');
+				const vidya = document.getElementById('vidya');
+
+				// Initially collapse the sidebar
+				sidebar.classList.add('collapsed');
+				button.textContent = 'keyboard_arrow_up';
+				text.textContent = 'Got any doubts? Ask Vidya';
+				vidya.src = ''; // Prevents loading until expanded
+				});
+
+
 			function toggleSidebar() {
 				const sidebar = document.getElementById('sidebarBox');
 				const button = sidebar.querySelector('button i');
@@ -660,7 +675,7 @@
 				console.log('before going to if loops')
 
 				expandButton.addEventListener("click", function () {
-					sidebarHeader.style.displa='none';
+					// sidebarHeader.style.display='none';
 					console.log('button is clicked');
 					sidebar.classList.add("fullscreen");
     				expandButton.innerHTML = '<i class="material-icons">fullscreen_exit</i>';
