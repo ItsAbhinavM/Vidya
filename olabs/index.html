@@ -609,7 +609,7 @@
 			height: 100vh;
 			z-index: 1000;
 			background: white;
-			transition: all 2s ease;
+			transition: height 2s ease;
 			border-radius: 0;
 		}
 	</style>
@@ -682,7 +682,7 @@
 					const originalWidth = rect.width;
 					const originalHeight = rect.height;
 					
-					sidebar.style.transition = 'all 0.5s ease';
+					sidebar.style.transition = 'height 0.5s ease';
 					sidebar.style.position = 'fixed';
 					sidebar.style.top = originalTop + 'px';
 					sidebar.style.left = originalLeft + 'px';
@@ -736,7 +736,7 @@
 				} else {
 					const rect = sidebar.getBoundingClientRect();
 					
-					sidebar.style.transition = 'all 0.5s ease';
+					sidebar.style.transition = 'height 0.5s ease';
 					
 					sidebar.classList.remove("fullscreen");
 					
