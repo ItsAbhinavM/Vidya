@@ -1,0 +1,14 @@
+{
+    "name": "Olabs Scraper",
+    "description": "Web Scraper to find your current experiment on Olabs",
+    "version": "1.0",
+    "host_permissions": ["http://127.0.0.1:5000/*"],
+    "permissions": ["tabs", "scripting"],
+    "manifest_version": 3,
+    "action": {
+      "default_icon": "book.png"
+    },
+    "background": {
+    "service_worker": "background.js"
+  }
+  }
