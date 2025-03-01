@@ -637,11 +637,10 @@
 				const text = sidebar.querySelector('p');
 				const vidya = document.getElementById('vidya');
 
-				// Initially collapse the sidebar
 				sidebar.classList.add('collapsed');
 				button.textContent = 'keyboard_arrow_up';
 				text.textContent = 'Got any doubts? Ask Vidya';
-				vidya.src = ''; // Prevents loading until expanded
+				vidya.src = ''; 
 			});
 
 			function toggleSidebar() {
@@ -654,7 +653,6 @@
 					sidebar.classList.add('collapsed');
 					button.textContent = 'keyboard_arrow_up';
 					text.textContent = 'Got any doubts? Ask Vidya';
-					// Don't change the src when collapsing
 				} else {
 					sidebar.classList.remove('collapsed');
 					button.textContent = 'remove';
@@ -665,29 +663,46 @@
 				}
 			}
 
-			async function expandIframe() {
+			function expandIframe() {
 				const iframe = document.getElementById("vidya");
 				const sidebar = document.getElementById("sidebarBox");
 				const sidebarHeader = document.getElementById('sidebarHeader');
 				const expandButton = document.getElementById("fullscreenButton");
-				const exitButton = document.getElementById("exitButton");
-
-				// Check if the sidebar is currently collapsed and iframe is empty
+				
 				if (sidebar.classList.contains('collapsed') &&
 					(iframe.src === '' || !iframe.src.includes('localhost:12393'))) {
-					// Load the iframe source before expanding
 					iframe.src = 'http://localhost:12393/';
 				}
 
-				// Toggle fullscreen state
 				if (!sidebar.classList.contains("fullscreen")) {
-					// Enter fullscreen
+					const rect = sidebar.getBoundingClientRect();
+					const originalTop = rect.top;
+					const originalLeft = rect.left;
+					const originalWidth = rect.width;
+					const originalHeight = rect.height;
+					
+					sidebar.style.transition = 'all 0.5s ease';
+					sidebar.style.position = 'fixed';
+					sidebar.style.top = originalTop + 'px';
+					sidebar.style.left = originalLeft + 'px';
+					sidebar.style.width = originalWidth + 'px';
+					sidebar.style.height = originalHeight + 'px';
+					sidebar.style.margin = '0';
+					
+					sidebar.offsetHeight;
+					
 					sidebar.classList.add("fullscreen");
 
-					// Hide the normal header in fullscreen mode
+					requestAnimationFrame(() => {
+						sidebar.style.top = '0';
+						sidebar.style.left = '0';
+						sidebar.style.width = '100vw';
+						sidebar.style.height = '100vh';
+						sidebar.style.borderRadius = '0';
+					});
+					
 					sidebarHeader.style.display = 'none';
-
-					// Create minimize button if it doesn't exist
+					
 					let minimizeButton = document.getElementById("minimizeButton");
 					if (!minimizeButton) {
 						minimizeButton = document.createElement("button");
@@ -702,13 +717,12 @@
 						minimizeButton.style.borderRadius = '4px';
 						minimizeButton.style.padding = '5px';
 						minimizeButton.style.cursor = 'pointer';
-						minimizeButton.onclick = expandIframe; // Use the same function to exit fullscreen
+						minimizeButton.onclick = expandIframe; 
 						sidebar.appendChild(minimizeButton);
 					} else {
 						minimizeButton.style.display = 'block';
 					}
-
-					// Make the iframe take up the full space
+					
 					iframe.style.height = '100%';
 					iframe.style.position = 'absolute';
 					iframe.style.top = '0';
@@ -716,27 +730,31 @@
 					iframe.style.right = '0';
 					iframe.style.bottom = '0';
 
-					// Change button appearance
 					expandButton.innerHTML = '<i class="material-icons">fullscreen_exit</i>';
-
-					// Add exit button if needed
-					if (exitButton) {
-						exitButton.style.display = "none"; // Hide the old exit button
-					}
+					
 				} else {
-					// Exit fullscreen
+					const rect = sidebar.getBoundingClientRect();
+					
+					sidebar.style.transition = 'all 0.5s ease';
+					
 					sidebar.classList.remove("fullscreen");
-
-					// Restore the header
+					
+					sidebar.style.position = 'fixed';
+					sidebar.style.right = '15px';
+					sidebar.style.bottom = '15px';
+					sidebar.style.top = 'auto';
+					sidebar.style.left = 'auto';
+					sidebar.style.width = '350px';
+					sidebar.style.height = '480px';
+					sidebar.style.borderRadius = '15px';
+					
 					sidebarHeader.style.display = '';
 
-					// Hide minimize button
 					const minimizeButton = document.getElementById("minimizeButton");
 					if (minimizeButton) {
 						minimizeButton.style.display = 'none';
 					}
 
-					// Reset iframe styling
 					iframe.style.height = '';
 					iframe.style.position = '';
 					iframe.style.top = '';
@@ -744,14 +762,7 @@
 					iframe.style.right = '';
 					iframe.style.bottom = '';
 
-					// Reset button appearance
 					expandButton.innerHTML = '<i class="material-icons">fullscreen</i>';
-					iframe.classList.remove("fullscreen-iframe");
-
-					// Hide exit button if needed
-					if (exitButton) {
-						exitButton.style.display = "none";
-					}
 				}
 			}
 
