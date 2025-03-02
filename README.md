@@ -1,3 +1,8 @@
+Consolation prize winning project at the OLabs national level hackathon. It was made by me, [@hrideshmg](https://github.com/hrideshmg), [@harikrishnatp](https://github.com/harikrishnatp) and [@Nishthajain7](https://github.com/Nishthajain7) under our team name - Sambar Scripters.
+
+Devfolio Link: [Vidya](https://devfolio.co/projects/vidya-c7f0)
+
+---
 # Vidya - The Virtual Teacher for OLabs
 
 ## Overview
