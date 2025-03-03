@@ -8,6 +8,10 @@ Devfolio Link: [Vidya](https://devfolio.co/projects/vidya-c7f0)
 ## Overview
 
 Vidya is an AI-powered virtual teacher designed to assist students in performing and understanding experiments on the OLabs platform. Unlike traditional chatbots, Vidya has an animated avatar which can express emotions and interact with students in a human-like manner making learning more immersive and engaging.
+<div style="display: flex; justify-content: space-between;">
+  <img src="Assets/Vidya-main.png" alt="Vidya-Main" width="45%" />
+  <img src="Assets/Vidya-Hindi.png" alt="Vidya-Hindi" width="45%" />
+</div>
 
 ## Features
 
@@ -70,3 +74,7 @@ Vidya is chiefly divided into three different repositories -
 - Open `index.html` inside the `olabs/` directory in a web browser.
 
 ---
+
+## License
+
+This project is licensed under the [GNU License.](LICENSE)
